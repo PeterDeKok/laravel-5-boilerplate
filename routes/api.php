@@ -13,6 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('json.response')->group(function () {
+    // public routes
+    // ...
+
+    // Private Routes
+    Route::middleware('auth:api')->group(function () {
+        Route::get('me', 'Api\UserController@get')->name('me');
+    });
+
 });

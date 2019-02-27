@@ -26,6 +26,12 @@
                                     <a href="#password" class="nav-link" aria-controls="password" role="tab" data-toggle="tab">@lang('navs.frontend.user.change_password')</a>
                                 </li>
                             @endif
+
+                            @can('manage api keys')
+                                <li class="nav-item">
+                                    <a href="#api-keys" class="nav-link" aria-controls="api-keys" role="tab" data-toggle="tab">@lang('navs.frontend.user.api_keys')</a>
+                                </li>
+                            @endcan
                         </ul>
 
                         <div class="tab-content">
@@ -42,6 +48,12 @@
                                     @include('frontend.user.account.tabs.change-password')
                                 </div><!--tab panel change password-->
                             @endif
+
+                            @can('manage api keys')
+                                <div role="tabpanel" class="tab-pane fade show pt-3" id="api-keys" aria-labelledby="api-keys-tab">
+                                    @include('frontend.user.account.tabs.api-keys')
+                                </div><!--tab panel change api-keys-->
+                            @endcan
                         </div><!--tab content-->
                     </div><!--tab panel-->
                 </div><!--card body-->

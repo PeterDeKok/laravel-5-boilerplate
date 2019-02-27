@@ -19,7 +19,7 @@ return [
     ],
 
     'frontend' => [
-        'contact' => 'Contact',
+        'contact'   => 'Contact',
         'dashboard' => 'Dashboard',
         'login'     => 'Login',
         'macros'    => 'Macros',
@@ -31,6 +31,7 @@ return [
             'change_password' => 'Change Password',
             'my_information'  => 'My Information',
             'profile'         => 'Profile',
+            'api_keys'        => 'API keys',
         ],
     ],
 ];
